@@ -1,0 +1,252 @@
+/* Body */
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+
+
+
+/* Navbar */
+.navbar {
+    height: 4.5rem;
+    background-color: white;
+    
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2.2rem !important;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.airbnb-head {
+    font-size: 1.5rem !important;
+    color: #fe424d !important;
+}
+
+
+
+
+
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+
+
+
+
+/* Cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    /* object-fit: cover !important; */
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* Card Effects */
+.card-img-overlay {
+    opacity: 1;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-color: #222222;
+}
+
+.guest-fav {
+    background-color: rgba(239, 238, 238, 0.909);
+    padding: 0.3rem 0 0.3rem 0;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    border-color: #222222;
+}
+
+.box-shadow:hover img {
+    border-radius: 25px;
+    box-shadow: 7px 7px 2px rgb(171, 171, 171) !important;
+}
+
+.box-shadow:hover {
+    opacity: 1;
+}
+
+.box-shadow {
+    opacity: 0.95;
+}
+
+
+
+
+
+
+
+/* New Page */
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+
+
+
+
+/* Edit Page */
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+.old-image {
+    height: 100px;
+}
+
+
+
+
+/* Show Page */
+.show-img {
+    height: 45vh;
+    width: auto !important;
+    display: flex;
+    justify-content: center;
+    /* border: 1rem solid black; */
+    border-radius: 0.8rem;
+}
+
+.img-middle {
+    display: flex;
+    justify-content: center;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.comment-size {
+    font-size: 15px;
+}
+
+.comment-bold {
+    font-weight: 600;
+}
+
+.review-size {
+    /* font-size: 20px; */
+    display: flex;
+    justify-content: center;
+}
+
+
+.heading-image,.login-heading,.signup-heading,.new-heading,.edit-heading,.review-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.rating-display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rating {
+    font-size: 20px;
+}
+
+.show-review {
+    display: flex;
+    justify-content: center;
+}
+
+.delete-review {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+
+
+
+
+/* Index Page */
+.price-opacity {
+    font-size: 15px;
+    color: #585858;
+    font-weight: 500;
+}
+
+
+
+
+/* Map */
+#map {
+    margin-left: 7rem;
+    height: 550px;
+    width: 60rem;
+    border-radius: 1rem;
+} 
+
+.map-head {
+    display: flex;
+    justify-content: center;
+}

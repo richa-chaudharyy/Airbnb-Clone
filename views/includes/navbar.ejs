@@ -1,0 +1,69 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: #ffffff;
+  }
+
+  .search-btn i {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  .search-btn {
+    font-size: 0.8rem;
+    box-shadow: 3px 3px 1px rgb(148, 148, 148);
+  }
+
+  .search-inp {
+    border-radius: 25px;
+    /* padding: 0.5rem 5rem 0.5rem 5rem; */
+    width: 22rem;
+    font-size: 0.8rem;
+    margin-right: 1rem !important;
+    box-shadow: 3px 3px 1px rgb(115, 115, 115);
+  }
+
+  .icon {
+    margin-left: 1rem;
+  }
+</style>
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand icon" href="/listings"><i class="fa-solid fa-map-location-dot fa-compass"></i></a>
+    <a class="nav-link fw-semibold airbnb-head" href="/listings">airbnb</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input  class="form-control me-2 search-inp" type="search" placeholder="Search destinations" />
+            <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link fw-medium" href="/listings/new">airbnb your home</a>
+        <% if (!currUser) { %>
+          <a class="nav-link fw-bolder" href="/signup">Sign up</a>
+          <a class="nav-link fw-bolder" href="/login">Log in</a>
+        <% } %>
+        <% if (currUser) { %>
+          <a class="nav-link fw-bolder" href="/logout">Log out</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
