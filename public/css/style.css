@@ -40,34 +40,86 @@ body {
 
 
 /* Footer */
-.f-info-links a {
-    text-decoration: none;
-    color: #222222;
-}
-
-.f-info-links, .f-info-socials, .f-info-brand {
+.stay {
     width: 100%;
+    height: 16rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 2rem;
 }
 
-.f-info-socials i {
-    font-size: 1.2rem;
-    margin-right: 1rem;
+.stay div {
+    font-size: 0.85rem;
+    font-weight: 400 !important;
+}
+
+.stay span {
+    font-size: 0.85rem;
+    color: #676767;
+    font-weight: 500;
+}
+
+
+.help {
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    width: 100%;
+    height: 22rem;
+}
+
+.div1,.div2,.div3 {
+    width: 30rem;
+}
+
+.div1,.div2,.div3 a {
+    line-height: 2.2rem !important;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+h4 {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+
+.one {
+    width: 12.5rem;
+    height: 5rem !important;
+    line-height: 1.2rem;
+}
+
+.line {
+    background-color: rgba(161, 161, 161, 0.475);
+    width: 95%;
+    height: 0.06rem;
+    margin-left: 2rem;
 }
 
 .f-info {
-    text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
+    height: 50rem;
+    background-color: #ebebeb6c;
 }
 
+.last {
+    display: flex;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #000000bc;
+    padding-top: 1.4rem;
+}
 
+.start {
+    margin-right: 25rem;
+}
+
+.end {
+    margin: auto;
+    font-weight: 700;
+}
 
 
 
@@ -80,7 +132,6 @@ body {
 .card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
-    /* object-fit: cover !important; */
 }
 
 .card-body {
@@ -162,11 +213,10 @@ body {
 
 /* Show Page */
 .show-img {
-    height: 45vh;
+    height: 48vh;
     width: auto !important;
     display: flex;
     justify-content: center;
-    /* border: 1rem solid black; */
     border-radius: 0.8rem;
 }
 
@@ -193,7 +243,6 @@ body {
 }
 
 .review-size {
-    /* font-size: 20px; */
     display: flex;
     justify-content: center;
 }
@@ -224,6 +273,11 @@ body {
     align-items: flex-end;
 }
 
+.review-heading {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
 
 
 
@@ -240,11 +294,16 @@ body {
 
 /* Map */
 #map {
-    margin-left: 7rem;
+    /* margin-left: 7rem; */
     height: 550px;
     width: 60rem;
     border-radius: 1rem;
 } 
+
+.div {
+    display: flex;
+    justify-content: center;  
+}
 
 .map-head {
     display: flex;
