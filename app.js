@@ -108,9 +108,9 @@ app.use((req, res, next) => {
 });
 
 
-app.get("/", (req, res) => {
-    res.render("listings/index.ejs"); // make sure this file exists
-});
+// app.get("/", (req, res) => {
+//     res.render("listings/index.ejs"); // make sure this file exists
+// });
 
 
 
@@ -134,9 +134,9 @@ app.use("/listings/:id/reviews", reviewRouter);
 
 
 
-// app.get("/", (req, res) => {
-//     res.redirect("/listings");
-// });
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 
 
