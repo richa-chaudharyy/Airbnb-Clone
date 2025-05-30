@@ -114,7 +114,12 @@
     </div>
 
 </div>
-<div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 mt-3">
+
+
+
+
+
+<!-- <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 mt-3">
     <% for(let listing of allListings) { %>
     <a href="/listings/<%=listing._id%>" class="listing-link">
         <div class="listing-card card box-shadow">
@@ -132,7 +137,45 @@
         </div>
     </a>
     <% } %>
+</div> -->
+
+
+
+
+
+<div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 mt-3">
+    <% for(let listing of allListings) { 
+        // Generate a random boolean (true/false) for each listing
+        let showOverlay = Math.random() < 0.3; 
+    %>
+    <a href="/listings/<%=listing._id%>" class="listing-link">
+        <div class="listing-card card box-shadow">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 12rem">
+            <% if (showOverlay) { %>
+            <div class="card-img-overlay">
+                <div class="guest-fav">Guest Favourite</div>
+            </div>
+            <% } %>
+            <div class="card-body">
+                <p class="card-text mt-1">
+                    <b><%= listing.title %></b><br>
+                    <span class="price-opacity">&#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "Price not available" %> / night</span>
+                    <i class="tax-info price-opacity mb-3"> &nbsp; &nbsp; &nbsp; +18%  GST</i>
+                </p>
+            </div>
+        </div>
+    </a>
+    <% } %>
 </div>
+
+
+
+
+
+
+
+
+
 
 <script>
     let taxSwitch = document.getElementById("flexSwitchCheckDefault");
