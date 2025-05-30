@@ -16,6 +16,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const Listing = require("./models/listing.js");
 
 
 const listingRouter = require("./routes/listing.js");
@@ -107,11 +108,37 @@ app.use((req, res, next) => {
 });
 
 
+app.get("/", (req, res) => {
+    res.render("listings/index.ejs"); // make sure this file exists
+});
 
 
+
+app.get("/listings/search", async (req, res) => {
+    const { q } = req.query;
+    const exactListing = await Listing.findOne({ title: { $regex: `^${q}$`, $options: "i" } });
+    if (exactListing) {
+        return res.redirect(`/listings/${exactListing._id}`);
+    }
+    req.flash("error", "There is no such place exists.");
+    res.redirect("/listings");
+});
+
+
+
+
+app.use("/", userRouter);
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
-app.use("/", userRouter);
+
+
+
+
+// app.get("/", (req, res) => {
+//     res.redirect("/listings");
+// });
+
+
 
 
 
@@ -121,11 +148,7 @@ app.all(/.*/, (err, req, res, next) => {
 });
 
 
-app.use((err, req, res, next) => {
-    let { statusCode = 500, message = "Something went wrong" } = err;
-console.log(err)
-    res.status(statusCode).render("error.ejs", { message });
-});
+
 
 
 app.use((err, req, res, next) => {
