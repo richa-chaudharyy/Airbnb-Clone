@@ -205,8 +205,9 @@ h4 {
     border: none !important;
 }
 .old-image {
-    height: 100px;
+    height: 80px;
 }
+
 
 
 
@@ -308,4 +309,16 @@ h4 {
 .map-head {
     display: flex;
     justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.bottom-margin {
+    margin-bottom: 6rem;
 }

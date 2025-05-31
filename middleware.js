@@ -10,7 +10,7 @@ const ExpressError = require("./utils/ExpressError.js");
 module.exports.isLoggedIn = (req, res, next) => {
     if(!req.isAuthenticated()) {
         req.session.redirectUrl = req.originalUrl;
-        req.flash("error", "Please login in to add a new Place");
+        req.flash("error", "Please login in to add a new place");
         return res.redirect("/login");
     };
     next();

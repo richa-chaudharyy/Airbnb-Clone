@@ -42,7 +42,7 @@ module.exports.createListing = async (req, res, next) => {
     newListing.image = {url, filename};
     newListing.geometry = response.body.features[0].geometry;
     await newListing.save();
-    req.flash("success", "New Airbnb Home was Created!");
+    req.flash("success", "New airbnb come is Created!");
     res.redirect("/listings");
 };
 
@@ -72,7 +72,7 @@ module.exports.updateListing = async (req, res) => {
         listing.image = { url, filename };
         await listing.save();
     }
-    req.flash("success", "Airbnb Home get's Updated!");
+    req.flash("success", "Airbnb home get's Updated!");
     res.redirect(`/listings/${id}`);
 };
 
@@ -82,6 +82,6 @@ module.exports.updateListing = async (req, res) => {
 module.exports.destroyListing = async (req, res) => {
     let {id} = req.params;
     await Listing.findByIdAndDelete(id);
-    req.flash("error", "Airbnb Home get's Deleted");
+    req.flash("error", "Airbnb home get's deleted");
     res.redirect("/listings");
 };
