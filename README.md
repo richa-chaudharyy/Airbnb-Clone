@@ -1,19 +1,44 @@
 # Airbnb Clone
 
-Overview -
-This project is a full-stack web application inspired by Airbnb. It allows users to browse, book, and host rental properties through a visually engaging and interactive interface. Built with a focus on user experience and responsive design, it integrates real-time data validation, cinematic transitions, and modern frontend styling.
+A full-stack property listing web application inspired by Airbnb, built using Node.js, Express.js, EJS, and MongoDB. The application allows users to explore property listings, manage their own listings, and share reviews.
 
-Features - 
-- User authentication with secure registration and login using JSON Web Tokens (JWT)
-- Dynamic property listings with search functionality, filters, and pagination
-- Host dashboard for adding, editing, and managing rental properties
-- Booking system with real-time availability checks and intuitive date selection
-- Responsive layout optimized for both desktop and mobile devices
-- Interactive animations and transitions for a seamless user experience
-- Real-time form validation and error handling with clear feedback messages
+## Features
 
-Tech Stack -
-Frontend technologies include React, CSS Modules, and Styled Components.
-The backend is developed using Node.js and Express.js, while MongoDB serves as the database with Mongoose for data modeling.
-Authentication is handled using JWT and password hashing with Bcrypt.
-Deployment is done via Vercel for the frontend and Render for the backend.
+- User registration and login with session-based authentication
+- Create, view, update, and delete property listings
+- Upload and manage property images using Cloudinary
+- Add and manage property reviews and ratings
+- Interactive location maps using Mapbox
+- Authorization for managing listings and reviews
+- Responsive user interface
+
+## Tech Stack
+
+- **Frontend:** EJS, HTML, CSS, Bootstrap
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB, Mongoose
+- **Authentication:** Passport.js, Express Session
+- **Image Storage:** Cloudinary, Multer
+- **Maps:** Mapbox
+
+## Screenshots
+
+### Homepage
+![Homepage](screenshots/homepage.png)
+
+### Property Details
+![Property Details](screenshots/property-details.png)
+
+## Getting Started
+
+Clone the repository and navigate to the project directory.
+
+Install the required dependencies:
+
+```bash
+npm install
+```
+
+Configure the required environment variables for MongoDB, Cloudinary, Mapbox, and session management.
+
+Start the application using the script configured in `package.json`.
